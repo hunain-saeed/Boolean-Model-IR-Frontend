@@ -1,0 +1,31 @@
+.searchbar {
+    margin: 0 300px;
+}
+.paper {
+    /* background-color: #202125 !important; */
+    /* border-color: #77787e !important; */
+    height: 40px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* up right down left */
+    padding: 2px 5px 2px 20px;
+}
+
+.paperinput {
+    flex-grow: 2;
+    /* color: white !important; */
+}
+
+.divider {
+    height: 30px !important;
+    margin-right: 10px !important;
+}
+
+.papersearch {
+    flex-grow: 1;
+}
+
+.searchButton {
+    /* color: #77787e !important; */
+}
