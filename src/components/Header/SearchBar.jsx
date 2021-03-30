@@ -6,34 +6,41 @@ import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
 import Divider from "@material-ui/core/Divider";
 
-function SearchBar() {
-  const [name, setName] = React.useState("");
-  function handleChange(e) {
-    setName(e.target.value);
-    
-    console.log(name);
-  }
-  return (
-    <div className="searchbar">
-      <Paper
-        className="paper"
-        component="form"
-        variant="outlined"
-        elevation={3}
-      >
-        <InputBase
-          className="paperinput"
-          onChange={handleChange}
-          value={name}
-        />
+class SearchBar extends React.Component {
+  state = { query: "" };
+  handleChange = (e) => {
+    this.setState({ query: e.target.value });
+  };
+  
+  onFormSubmit = (e) => {
+    e.preventDefault();
+    this.props.onSearchSubmit(this.state.query.replace("/", "&"));
+  };
 
-        <IconButton className="papersearch" type="submit" aria-label="search">
-          <Divider className="divider" orientation="vertical" />
-          <SearchIcon className="searchButton" />
-        </IconButton>
-      </Paper>
-    </div>
-  );
+  render() {
+    return (
+      <div className="searchbar">
+        <Paper
+          className="paper"
+          component="form"
+          variant="outlined"
+          onSubmit={this.onFormSubmit}
+          elevation={3}
+        >
+          <InputBase
+            className="paperinput"
+            onChange={this.handleChange}
+            value={this.state.query}
+          />
+
+          <IconButton className="papersearch" type="submit" aria-label="search">
+            <Divider className="divider" orientation="vertical" />
+            <SearchIcon className="searchButton" />
+          </IconButton>
+        </Paper>
+      </div>
+    );
+  }
 }
 
 export default SearchBar;
