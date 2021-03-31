@@ -14,7 +14,7 @@ class Result extends React.Component {
         </div>
       );
     }
-    if (this.props.result.length != 0) {
+    if (this.props.result.length !== 0) {
       return (
         <div>
           <p>
