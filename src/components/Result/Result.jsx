@@ -10,7 +10,7 @@ class Result extends React.Component {
           <p>
             About {this.props.result.length} results ({this.props.time} seconds)
           </p>
-          <p>{this.props.error}</p>
+          <h2>{this.props.error}</h2>
         </div>
       );
     }
@@ -24,12 +24,12 @@ class Result extends React.Component {
             <Grid container spacing={3}>
               <Grid item xs={8}>
                 <div className="title">
-                  <Paper elevation={3} className="paperTitle">
+                  <Paper variant="outlined" className="">
                     <h4>Doc Titles</h4>
                   </Paper>
                   {this.props.result.map((n) => {
                     return (
-                      <Paper key={n} elevation={3} className="paperTitle">
+                      <Paper key={n} variant="outlined" className="">
                         <p>{this.props.title[n]}</p>
                       </Paper>
                     );
