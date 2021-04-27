@@ -6,9 +6,8 @@ Backend is developed on Flask: [Boolean-Model-Information-Retrieval-Backend](htt
 Installation and Setup Instructions
 Clone down this repository. You will need node and npm installed globally on your machine.
 
-Installation:
-
-npm install
+Installation: <br />
+`npm install`
 
 To Run Test Suite: <br />
 `npm test`
