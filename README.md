@@ -1,7 +1,7 @@
 # Boolean Model of IR
 
 Frontend for Boolean Model of IR, developed using React, Material-UI, and CSS. <br />
-Backend is developed on Flask: [Boolean-Model-Information-Retrieval-Backend](https://github.com/hunain631/Boolean-Model-Information-Retrieval-Backend)
+Backend is developed on Flask: [Boolean-Model-Information-Retrieval-Backend](https://github.com/hunain-saeed/Boolean-Model-Information-Retrieval-Backend)
 
 Installation and Setup Instructions
 Clone down this repository. You will need node and npm installed globally on your machine.
